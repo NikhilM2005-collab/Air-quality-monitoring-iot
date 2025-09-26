@@ -1,0 +1,45 @@
+# Air Quality Monitoring System (IoT)
+
+This project is an IoT-based **Air Quality Monitoring System** built with **ESP32**, **MQ-135 gas sensor**, and **DHT22 temperature & humidity sensor**.  
+The system reads environmental parameters and uploads them to **ThingSpeak** for real-time monitoring and visualization.
+
+## Features
+- Monitors Air Quality (approx. VOC/CO₂ proxy using MQ-135)
+- Monitors Temperature and Humidity (DHT22)
+- Uploads data to **ThingSpeak** IoT platform
+- Live dashboard with graphs
+- Extendable to support accurate PM2.5/PM10 sensors (PMS5003, SDS011)
+
+## Components
+- ESP32 Dev Board
+- MQ-135 Gas Sensor Module
+- DHT22 Sensor
+- Breadboard, jumper wires, USB cable
+
+## Setup Instructions
+1. Clone this repository.
+2. Open `air_quality_monitor.ino` in Arduino IDE.
+3. Install libraries:
+   - `DHT sensor library` by Adafruit
+   - `Adafruit Unified Sensor`
+   - ESP32 board support in Arduino IDE
+4. Update your **WiFi credentials** and **ThingSpeak API key** in the code.
+5. Upload to your ESP32 and monitor via serial output.
+
+## Cloud Visualization
+- ThingSpeak is used for storing and visualizing sensor data.
+- Create a free account at [ThingSpeak](https://thingspeak.com/).
+- Create a channel and copy the **Write API Key**.
+- Update the code with your API key.
+
+## Example Dashboard
+- Field 1: MQ-135 proxy values
+- Field 2: Temperature (°C)
+- Field 3: Humidity (%)
+
+---
+
+### Author
+Generated on September 26, 2025  
+You can extend this project with PMS5003 or BME680 sensors for more accurate monitoring.
+
